@@ -9,7 +9,9 @@ export const Box = styled.TouchableOpacity`;
   background: #f1f2f5;
   width:200px;
   height:250px;
+
   border-radius:8px;
+  overflow: hidden;
 `;
 export const BoxImage = styled.View`;
 
