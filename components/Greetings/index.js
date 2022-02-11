@@ -7,6 +7,7 @@ import {
   BoxIcon,
   BoxEye,
   Eye,
+  ClosedEye,
   BoxHelp,
   Help,
   BoxInvite,
@@ -14,7 +15,7 @@ import {
   Name,
 } from './styles';
 
-const Greetings = () => {
+const Greetings = ({openEye, setOpenEye}) => {
   return (
     <Container>
       <Box1>
@@ -22,8 +23,8 @@ const Greetings = () => {
           <ProfileIcon/>
         </Profile>
         <BoxIcon>
-          <BoxEye>
-            <Eye/>
+          <BoxEye onPress={() => setOpenEye(!openEye)}>
+            {openEye ? <Eye/> : <ClosedEye/>}
           </BoxEye>
           <BoxHelp>
             <Help/>

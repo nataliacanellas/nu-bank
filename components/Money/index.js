@@ -5,16 +5,18 @@ import {
   Account,
   ArrowIcon,
   Cash,
+  HideCash,
+  
  } from './styles';
 
-const Money = () => {
+const Money = ({openEye}) => {
   return (
     <Container>
       <Box2>
         <Account>Account</Account>
         <ArrowIcon/>
       </Box2>
-      <Cash>$30,000.00</Cash>
+      {openEye ? <Cash>$30,000.00</Cash> : <HideCash/>}
     </Container>
   );}
 

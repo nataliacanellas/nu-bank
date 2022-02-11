@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export const Container = styled.SafeAreaView`
   height: 180px;
-  background-color: #830ad1;
+  background-color: ;#830ad1
 `;
 
 export const Box1 = styled.View`
@@ -55,6 +55,13 @@ export const Eye = styled(Feather).attrs({
   color: "white",
 })`
 
+`;
+
+export const ClosedEye = styled(Feather).attrs({
+  name: "eye-off",
+  size: 28,
+  color: "white",
+})`
 `;
 
 export const BoxHelp = styled.TouchableOpacity.attrs({

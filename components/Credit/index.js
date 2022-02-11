@@ -9,11 +9,12 @@ import {
   Bill,
   Value,
   Limit,
-
+  HideCash,
+  HideLimit,
 
  } from './styles';
 
-const Credit = () => {
+const Credit = ({openEye}) => {
   return (
   <Container>
     <BigBox>
@@ -23,8 +24,8 @@ const Credit = () => {
         <ArrowIcon/>
       </Box>
       <Bill>Open Bill</Bill>
-      <Value>$65.00</Value>
-      <Limit>Available limit of $1,850.00</Limit>
+      {openEye ? <Value>$65.00</Value> : <HideCash/>}
+      {openEye ? <Limit>Available limit of $1,850.00</Limit> : <HideLimit/>}
     </BigBox>
   </Container>
   );

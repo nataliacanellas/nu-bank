@@ -33,3 +33,9 @@ export const Cash = styled.Text`
   margin-top:20px;
 `;
 
+export const HideCash = styled.View`
+  background: #f0f1f5;
+  height: 30px; 
+  width: 60%;
+  margin-top:20px;
+`;

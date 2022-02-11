@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../../../components/Button';
 import Greetings from '../../../components/Greetings';
 import Money from '../../../components/Money';
@@ -22,11 +22,21 @@ import Credit from '../../../components/Credit';
 import Investment from '../../../components/Investment';
 import LifeShop from '../../../components/LifeShop';
 import FindOut from '../../../components/FindOut';
+import { StatusBar } from 'react-native';
 
 const Home = () => {
-  return <Container>
-    <Greetings/>
-    <Money/>
+  
+  const [openEye, setOpenEye] = useState(true);
+
+
+  return (
+  <Container>
+    <StatusBar
+      barStyle='light-content'
+      backgroundColor="#830ad1"
+    />
+    <Greetings openEye = {openEye} setOpenEye = {setOpenEye}/>
+    <Money openEye = {openEye}/>
     <AllButtons>
       <Button text="Pix Area" image={Pix}/>
       <Button text="Pay" image={Pay}/>
@@ -38,7 +48,7 @@ const Home = () => {
     </AllButtons>
     <Cards/>
     <Suggest/>
-    <Credit/>
+    <Credit openEye = {openEye}/>
     <Investment/>
     <LifeShop title="Life Insurance" text="Get to know Nubank Life: a simple insurance that fits your pocket." image={Heart}/>
     <LifeShop title="Shopping" text="Exclusive advantages from our favorite brands" image={Shopp}/>
@@ -47,7 +57,8 @@ const Home = () => {
       <FindOut title="Invite Friends" text="Show to your friends how easy it is to have a life without worrying with paperwork." image={Friends}/>
       <FindOut title="WhatsApp" text="Safe Payments, fast and without fees. Nubank Experience without..." image={Whats}/>
     </BoxFind>
-  </Container>;
+  </Container>
+  );
 }
 
 export default Home;

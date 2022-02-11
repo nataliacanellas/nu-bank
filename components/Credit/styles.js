@@ -46,3 +46,16 @@ export const Limit = styled.Text`
   margin-top: 6px;
 `;
 
+export const HideCash = styled.View`
+  background: #f0f1f5;
+  height: 30px; 
+  width: 60%;
+  margin-top:10px;
+`;
+
+export const HideLimit = styled.View`
+  background: #f0f1f5;
+  height: 15px; 
+  width: 60%;
+  margin-top:10px;
+`;
